@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -6,20 +8,10 @@ body {
   background-color: #000000;
 }
 
-@font-face {
-  font-family: 'Huglove';
-  src: url('./Strange\ Dreams.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-  
-
-
 
 h1 {
   font-size: 50px;
-  font-family: 'Huglove', sans-serif;
+  font-family: 'Mynerve', sans-serif;
 }
 
 
