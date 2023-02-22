@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>À propos de moi</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 10rem;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        input[type="submit"]:active {
+            background-color: #367539;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="sendreview.php" method="post">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="rating">Note :</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 étoiles</option>
+            <option value="4">4 étoiles</option>
+            <option value="3">3 étoiles</option>
+            <option value="2">2 étoiles</option>
+            <option value="1">1 étoile</option>
+        </select>
+        <br>
+        <label for="comment">Commentaire :</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <br>
+        <input type="submit" value="Envoyer">
+    </form>
+
+</body>
+
+</html>

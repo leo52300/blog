@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Mon Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script> document.addEventListener("keydown", function (event) {
+      if (event.altKey && event.code === "KeyM") {
+        // console.log('Ctrl + Shift + E');
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align: center;">Mon Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="/a-propos.html" target="_blank">À propos</a></li>
+        <li><a href="avis.html" target="_blank*">avis</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <article>
+        <h2>Anet a8</h2>
+        <p>Je vous présente ma premier imprimant 3D</p>
+        <a href="/articles/article.html">Lire la suite</a>
+      </article>
+      <article>
+        <h2>Creality ender 3</h2>
+        <p>Je vous présente ma 2ème imprimant 3D</p>
+        <a href="/articles/nouvelle-imprimant.html">Lire la suite</a>
+      </article>
+    </section>
+    <aside>
+      <h2></h2>
+      <p></p>
+    </aside>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/leo.menestrel.31/" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png"
+          alt="Facebook"></a>
+      <a href="https://www.instagram.com/00_darkred_00/" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+          alt="Instagram"></a>
+      <a href="https://discord.gg/qQzMSM8F" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Discord_Logo_sans_texte.svg/1818px-Discord_Logo_sans_texte.svg.png"
+          alt="Instagram"></a>
+    </div>
+
+    <p>Copyright © Mon Blog 2023</p>
+  </footer>
+
+  <input type="checkbox" id="mode-switch">
+  <label class="checkbox" id="switcher">Activer le mode sombre</label>
+
+  <script>
+    $('#switcher').click(function () {
+      $('#mode-switch').trigger('click');
+    });
+
+    $('#mode-switch').click(function () {
+      $('body').toggleClass('dark-mode');
+    });
+  </script>
+</body>
+
+</html>
