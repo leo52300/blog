@@ -8,13 +8,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script> document.addEventListener("keydown", function (event) {
-      if (event.altKey && event.code === "KeyM") {
-        // console.log('Ctrl + Shift + E');
-      }
-    });
-  </script>
-
 </head>
 
 <body>
@@ -65,10 +58,16 @@
   </footer>
 
   <input type="checkbox" id="mode-switch">
-  <label class="checkbox" id="switcher">Activer le mode sombre</label>
+  <label class="checkbox" id="switcher">Activer le mode <span>sombre</span></label>
 
   <script>
+    let initialState = true;
+    const label = $('#switcher > span');
     $('#switcher').click(function () {
+      initialState = !initialState;
+      var txt = ''; 
+      txt = (initialState)? 'sombre': 'clair';
+      label.html(txt);
       $('#mode-switch').trigger('click');
     });
 
