@@ -2,7 +2,10 @@
 <html>
 
 <head>
-    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" type="image/png" href="icon.png">
     <title>À propos de moi</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,6 +32,25 @@
         <br>
         <input type="submit" value="Envoyer">
     </form>
+
+    <input type="checkbox" id="mode-switch">
+  <label class="checkbox" id="switcher">Activer le mode <span>sombre</span></label>
+
+  <script>
+    let initialState = true;
+    const label = $('#switcher > span');
+    $('#switcher').click(function () {
+      initialState = !initialState;
+      var txt = ''; 
+      txt = (initialState)? 'sombre': 'clair';
+      label.html(txt);
+      $('#mode-switch').trigger('click');
+    });
+
+    $('#mode-switch').click(function () {
+      $('body').toggleClass('dark-mode');
+    });
+  </script>
 
 </body>
 

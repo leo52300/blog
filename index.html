@@ -38,8 +38,10 @@
       </article>
     </section>
     <aside>
-      <h2></h2>
-      <p></p>
+      <h2>a propos de moi</h2>
+      <p>bonjour je m'appelle Léo je suis en 3ème est je suis en train de crée un site internet sur les imprimant 3D
+        donc je vais
+        vous montrer plein de chose sur les imprimant 3D est des impressions 3D</p>
     </aside>
   </main>
   <footer>
@@ -66,8 +68,8 @@
     const label = $('#switcher > span');
     $('#switcher').click(function () {
       initialState = !initialState;
-      var txt = ''; 
-      txt = (initialState)? 'sombre': 'clair';
+      var txt = '';
+      txt = (initialState) ? 'sombre' : 'clair';
       label.html(txt);
       $('#mode-switch').trigger('click');
     });

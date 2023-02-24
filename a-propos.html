@@ -2,9 +2,15 @@
 <html>
 
 <head>
-	<link rel="icon" type="image/png" href="favicon-32x32.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+		integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="icon" type="image/png" href="icon.png">
 	<title>À propos de moi</title>
 	<style>
+		.contact-form{
+			margin-top: 125px;
+		}
 		/* Réinitialisation des styles */
 		* {
 			margin: 0;
@@ -74,7 +80,8 @@
 		.contact-form {
 			width: 80%;
 			max-width: 600px;
-			margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 			padding: 20px;
 			border: 1px solid #ccc;
 			border-radius: 5px;
@@ -114,9 +121,9 @@
 
 <body>
 	<h1>À propos de moi</h1>
-	<p>pBienvenue sur ma page "À propos". Je m'apelle [Léo] et je suis [en 3ème]. J'ai créé ce site web pour
-		[Pour vous présenter les imprimant 3D des fichiers que je peux vous conseiller des fichier] donc voila je vous
-		est tout dit est ci vous avez des question .</p>
+	<p>Bienvenue sur ma page "À propos". Je m'apelle [Léo] et je suis [en 3ème]. J'ai créé ce site web pour</p>
+	<p>[Pour vous présenter les imprimant 3D des fichiers que je peux vous conseiller des fichier] donc voila je vous
+	est tout dit est ci vous avez des question.</p>
 	<div class="contact-form">
 		<form action="sendmail.php" method="POST">
 			<label for="nom">Nom :</label>
@@ -134,6 +141,24 @@
 			<input type="submit" value="Envoyer" name="submit">
 		</form>
 	</div>
+	<input type="checkbox" id="mode-switch">
+	<label class="checkbox" id="switcher">Activer le mode <span>sombre</span></label>
+
+	<script>
+		let initialState = true;
+		const label = $('#switcher > span');
+		$('#switcher').click(function () {
+			initialState = !initialState;
+			var txt = '';
+			txt = (initialState) ? 'sombre' : 'clair';
+			label.html(txt);
+			$('#mode-switch').trigger('click');
+		});
+
+		$('#mode-switch').click(function () {
+			$('body').toggleClass('dark-mode');
+		});
+	</script>
 
 </body>
 
